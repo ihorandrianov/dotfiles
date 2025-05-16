@@ -7,6 +7,10 @@ abbr -a yr 'cal -y'
 abbr -a c cargo
 abbr -a e nvim
 abbr -a m make
+abbr -a g git
+abbr -a s ssh
+abbr -a l ls
+abbr -a ll lsa
 
 set -e PATH
 set -gx PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin

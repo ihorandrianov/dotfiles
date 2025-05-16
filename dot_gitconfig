@@ -13,6 +13,11 @@
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
+[core]
+	autocrlf = input
+	safecrlf = true
+[merge]
+	tool = nvim -d
 [commit]
   gpgsign = true
 [alias]
@@ -20,6 +25,8 @@
 	ci = commit
 	st = status
 	br = branch
+	lg = log --oneline
+	last = log -1 HEAD
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
