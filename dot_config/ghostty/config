@@ -1,0 +1,7 @@
+theme = rose-pine 
+font-family = "Fira Code Retina"
+font-size = 14
+background-opacity = 0.80
+background-blur-radius = 8 
+shell-integration = fish
+clipboard-trim-trailing-spaces = true

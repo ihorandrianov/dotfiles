@@ -1,0 +1,33 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Ihor Andrianov
+	email = andrianoia@gmail.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOC7yY6Czga7SQ9QAgd3Ry7ab0VhiZlVtvWu5JzDWeyS
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	ss = "!f() { git stash show stash^{/$*} -p; }; f"
+	sa = "!f() { git stash apply stash^{/$*}; }; f"
+	sl = stash list
+[http]
+	postBuffer = 157286400
+	version = HTTP/2
+[init]
+	defaultBranch = main
